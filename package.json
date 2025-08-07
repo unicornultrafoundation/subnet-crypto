@@ -43,7 +43,7 @@
   "homepage": "https://github.com/unicornultrafoundation/subnet-crypto#readme",
   "dependencies": {
     "eth-connect": "^6.0.3",
-    "ethereum-cryptography": "^1.0.3"
+    "ethereum-cryptography": "^3.2.0"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
