@@ -1,6 +1,5 @@
 import { Authenticator } from '../src/Authenticator'
-import { AuthLinkType, AuthChain } from '../src/types'
-import { recoverAddressFromEthSignature } from '../src/crypto'
+import { AuthLinkType } from '../src/types'
 
 describe('Sanity', function () {
   it('Should work with basic auth chain', async function () {

@@ -1,4 +1,4 @@
-import RequestManager, { bytesToHex, hexToBytes, sha3, stringToUtf8Bytes } from 'eth-connect'
+import { hexToBytes } from 'eth-connect'
 import {
   AuthIdentity,
   AuthChain,
@@ -18,7 +18,7 @@ import {
 
 export const VALID_SIGNATURE: string = 'VALID_SIGNATURE'
 
-const PERSONAL_SIGNATURE_LENGTH = 132
+// const PERSONAL_SIGNATURE_LENGTH = 132
 
 export namespace Authenticator {
   /** Validate that the signature belongs to the Ethereum address */
@@ -250,15 +250,18 @@ export const ECDSA_PERSONAL_EPHEMERAL_VALIDATOR: ValidatorType = async (
   throw new Error(`Ephemeral key expired. Expiration: ${expiration}. Test: ${dateToValidateExpirationInMillis}`)
 }
 
-const ERROR_VALIDATOR: ValidatorType = async (_: string, __: AuthLink) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+const ERROR_VALIDATOR: ValidatorType = async (_authority: string, _authLink: AuthLink) => {
   return { error: 'Error Validator.' }
 }
 
-export function getEphemeralSignatureType(signature: string): AuthLinkType {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export function getEphemeralSignatureType(_signature: string): AuthLinkType {
   return AuthLinkType.ECDSA_PERSONAL_EPHEMERAL
 }
 
-export function getSignedIdentitySignatureType(signature: string): AuthLinkType {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export function getSignedIdentitySignatureType(_signature: string): AuthLinkType {
   return AuthLinkType.ECDSA_PERSONAL_SIGNED_ENTITY
 }
 

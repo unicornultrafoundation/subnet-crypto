@@ -55,7 +55,8 @@ describe('Crypto utils', function () {
       realAccount.address,
       ephemeralIdentity,
       10,
-      async (message: string) => '0x' + '0'.repeat(130)
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+    async (_message: string) => '0x' + '0'.repeat(130)
     )
 
     expect(chain.authChain[0].payload).toEqual(realAccount.address)

@@ -7,7 +7,7 @@ import {
   getEphemeralSignatureType,
   ECDSA_PERSONAL_EPHEMERAL_VALIDATOR
 } from '../src/Authenticator'
-import { AuthLinkType, AuthChain } from '../src/types'
+import { AuthLinkType } from '../src/types'
 import { moveMinutes } from '../src/helper/utils'
 
 const mainnetProvider = new HTTPProvider(process.env.ETHEREUM_MAINNET_RPC || '', { fetch: fetch })
