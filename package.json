@@ -1,0 +1,65 @@
+{
+  "name": "@subnet-node/crypto",
+  "version": "1.0.0",
+  "description": "Crypto auth for Subnet",
+  "main": "dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc --project tsconfig.json",
+    "prewatch": "rm -rf dist",
+    "watch": "tsc --watch --project tsconfig.json",
+    "test": "jest --detectOpenHandles --colors --runInBand --coverage",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "bench": "node ./test/benchmark.js"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subnetproject/subnet-crypto.git"
+  },
+  "keywords": [
+    "subnet"
+  ],
+      "author": "Subnet",
+  "license": "Apache-2.0",
+  "bugs": {
+          "url": "https://github.com/subnetproject/subnet-crypto/issues"
+  },
+      "homepage": "https://github.com/subnetproject/subnet-crypto#readme",
+  "dependencies": {
+    "eth-connect": "^6.0.3",
+    "ethereum-cryptography": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@types/node-fetch": "^2.6.1",
+    "benchmark": "^2.1.4",
+    "eslint": "^8.16.0",
+    "eth-crypto": "^2.3.0",
+    "jest": "^28.1.0",
+    "node-fetch": "^2.6.7",
+    "ts-jest": "^28.0.3",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "semi": false
+  }
+}
