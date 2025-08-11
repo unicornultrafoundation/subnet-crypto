@@ -51,7 +51,7 @@
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "benchmark": "^2.1.4",
-    "eslint": "^8.16.0",
+    "eslint": "^9.33.0",
     "eth-crypto": "^2.3.0",
     "jest": "^28.1.0",
     "node-fetch": "^2.6.7",
